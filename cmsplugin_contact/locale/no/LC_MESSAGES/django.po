@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 15:23+0200\n"
+"POT-Creation-Date: 2018-07-01 19:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: admin.py:16
+#: cmsplugin_contact/admin.py:20
 msgid "Akismet API Key"
 msgstr "API-nøkkel for Akismet"
 
-#: admin.py:16
+#: cmsplugin_contact/admin.py:20
 msgid "Get a Wordpress Key from http://akismet.com/"
 msgstr "Hent Wordspress-nøkkel fra http://akismet.com/"
 
-#: admin.py:18
+#: cmsplugin_contact/admin.py:21
 msgid "ReCAPTCHA Public Key"
 msgstr "Offentlig ReCAPTCHA-nøkkel"
 
-#: admin.py:18 admin.py:19
+#: cmsplugin_contact/admin.py:21 cmsplugin_contact/admin.py:22
 msgid "Get this from http://www.google.com/recaptcha"
 msgstr "Hent denne fra http://www.google.com/recaptcha"
 
-#: admin.py:19
+#: cmsplugin_contact/admin.py:22
 msgid "ReCAPTCHA Private Key"
 msgstr "Privat ReCAPTCHA-nøkkel"
 
-#: admin.py:36
+#: cmsplugin_contact/admin.py:40
 msgid ""
 "Akismet library is not installed. Use \"easy_install akismet\" or \"pip "
 "install akismet\"."
@@ -46,134 +46,183 @@ msgstr ""
 "Akismet-biblioteket er ikke installert. Benytt \"easy_install akismet\" "
 "eller \"pip install akismet\""
 
-#: admin.py:50
+#: cmsplugin_contact/admin.py:54
 msgid "The API Key is not valid."
 msgstr "API-nøkkelen er ikke gyldig."
 
-#: admin.py:58
+#: cmsplugin_contact/admin.py:62
 msgid ""
 "ReCAPTCHA library is not installed. Use \"easy_install recaptcha-client\" or "
 "\"pip install recaptcha-client\"."
 msgstr ""
-"ReCAPTCHA-biblioteket er ikke installert. Benytt \"easy_install recaptcha-client\" "
-"eller \"pip install recaptcha-client\""
+"ReCAPTCHA-biblioteket er ikke installert. Benytt \"easy_install recaptcha-"
+"client\" eller \"pip install recaptcha-client\""
 
-#: cms_plugins.py:17
+#: cmsplugin_contact/cms_plugins.py:30
+#: cmsplugin_contact/templates/cmsplugin_contact/subject.txt:1
 msgid "Contact Form"
 msgstr "Kontaktskjema"
 
-#: cms_plugins.py:25
+#: cmsplugin_contact/cms_plugins.py:43
+msgid "Redirection"
+msgstr ""
+
+#: cmsplugin_contact/cms_plugins.py:46
 msgid "Spam Protection"
 msgstr "Søpplebeskyttelse"
 
-#: cms_plugins.py:84
-msgid "No subject"
-msgstr "Uten emne"
+#: cmsplugin_contact/forms.py:7
+msgid "Email"
+msgstr ""
 
-#: models.py:20
-msgid "Email recipient"
-msgstr "Epost-mottaker"
-
-#: models.py:21
-msgid "Email sender label"
-msgstr "Etikett for avsender"
-
-#: models.py:21
-msgid "Your email address"
-msgstr "Din epostadresse"
-
-#: models.py:22
-msgid "Subject label"
-msgstr "Etikett for emne"
-
-#: models.py:22
+#: cmsplugin_contact/forms.py:8
 msgid "Subject"
 msgstr "Emne"
 
-#: models.py:23
-msgid "Message content label"
-msgstr "Etikett for meldingsinnhold"
+#: cmsplugin_contact/forms.py:9
+msgid "Content"
+msgstr ""
 
-#: models.py:23
-msgid "Message"
-msgstr "Melding"
+#: cmsplugin_contact/models.py:17
+msgid "Light"
+msgstr ""
 
-#: models.py:24
+#: cmsplugin_contact/models.py:18
+msgid "Dark"
+msgstr ""
+
+#: cmsplugin_contact/models.py:21
+msgid "Normal"
+msgstr ""
+
+#: cmsplugin_contact/models.py:22
+msgid "Compact"
+msgstr ""
+
+#: cmsplugin_contact/models.py:24
+msgid "Form name"
+msgstr ""
+
+#: cmsplugin_contact/models.py:27
+msgid "Used to distinguish multiple contact forms on the same site."
+msgstr ""
+
+#: cmsplugin_contact/models.py:28
+msgid "Form Layout"
+msgstr ""
+
+#: cmsplugin_contact/models.py:30
+msgid "Choose the layout of contact form"
+msgstr ""
+
+#: cmsplugin_contact/models.py:33
+msgid "Email recipient"
+msgstr "Epost-mottaker"
+
+#: cmsplugin_contact/models.py:36
 msgid "Thanks message"
 msgstr "Bekreftelsesmelding"
 
-#: models.py:24
+#: cmsplugin_contact/models.py:37
 msgid "Message displayed on successful submit"
 msgstr "Melding vises ved gjennomført sending"
 
-#: models.py:24
+#: cmsplugin_contact/models.py:38
 msgid "Thank you for your message."
 msgstr "Takk for din beskjed."
 
-#: models.py:25
+#: cmsplugin_contact/models.py:39
 msgid "Submit button value"
 msgstr "Etikett for send-knapp"
 
-#: models.py:25
+#: cmsplugin_contact/models.py:40
 msgid "Submit"
 msgstr "Send"
 
-#: models.py:27
+#: cmsplugin_contact/models.py:43
 msgid "Spam protection method"
 msgstr "Metode for søppelbeskyttelse"
 
-#: models.py:33
+#: cmsplugin_contact/models.py:53
 msgid "ReCAPTCHA theme"
 msgstr "ReCAPTCHA-tema"
 
-#: nospam/fields.py:13
+#: cmsplugin_contact/models.py:57
+#, fuzzy
+#| msgid "ReCAPTCHA theme"
+msgid "ReCAPTCHA size"
+msgstr "ReCAPTCHA-tema"
+
+#: cmsplugin_contact/models.py:59
+msgid "URL Redirection"
+msgstr ""
+
+#: cmsplugin_contact/models.py:60
+msgid "If it is set, the form redirect to url when the form is valid"
+msgstr ""
+
+#: cmsplugin_contact/nospam/fields.py:13
 msgid "Please don't check this box."
 msgstr "Vennligst ikke huk av denne boksen."
 
-#: nospam/forms.py:42
-msgid "Please enter the two words on the image separated by a space:"
-msgstr "Vennligst oppgi de to ordene på bidet, separert med et mellomrom:"
-
-#: nospam/forms.py:44
-msgid "You did not enter any of the words."
-msgstr "Du oppga ingen av ordene."
-
-#: nospam/forms.py:92
-msgid "You did not enter the two words shown in the image."
-msgstr "Du oppga ikke de to ordene vist på bildet."
-
-#: nospam/forms.py:98
-msgid "The words you entered did not match the image"
-msgstr "Ordene du oppga stemte ikke overens med de på bildet"
-
-#: nospam/widgets.py:30
+#: cmsplugin_contact/nospam/widgets.py:12
 msgid "Are you a robot?"
 msgstr "Er du en robot?"
 
-#: templates/cmsplugin_contact/contact.html:39
-msgid "Incorrect please try again"
-msgstr "Ikke korrekt, vennligst prøv igjen"
+#: cmsplugin_contact/settings.py:7
+msgid "default"
+msgstr ""
 
-#: templates/cmsplugin_contact/contact.html:42
-msgid "Enter the words above:"
-msgstr "Oppgi ordene ovenfor:"
+#: cmsplugin_contact/templates/cmsplugin_contact/email.txt:1
+#, fuzzy
+#| msgid "Message"
+msgid "Message from"
+msgstr "Melding"
 
-#: templates/cmsplugin_contact/contact.html:43
-msgid "Enter the numbers you hear:"
-msgstr "Oppgi tallene du hører:"
+#~ msgid "No subject"
+#~ msgstr "Uten emne"
 
-#: templates/cmsplugin_contact/contact.html:48
-msgid "Get another CAPTCHA"
-msgstr "Få en ny CAPTCHA"
+#~ msgid "Email sender label"
+#~ msgstr "Etikett for avsender"
 
-#: templates/cmsplugin_contact/contact.html:49
-msgid "Get an audio CAPTCHA"
-msgstr "Få en lydbasert CAPTCHA"
+#~ msgid "Your email address"
+#~ msgstr "Din epostadresse"
 
-#: templates/cmsplugin_contact/contact.html:50
-msgid "Get an image CAPTCHA"
-msgstr "Få en bilde-CAPTCHA"
+#~ msgid "Subject label"
+#~ msgstr "Etikett for emne"
 
-#: templates/cmsplugin_contact/contact.html:52
-msgid "Help"
-msgstr "Hjelp"
+#~ msgid "Message content label"
+#~ msgstr "Etikett for meldingsinnhold"
+
+#~ msgid "Please enter the two words on the image separated by a space:"
+#~ msgstr "Vennligst oppgi de to ordene på bidet, separert med et mellomrom:"
+
+#~ msgid "You did not enter any of the words."
+#~ msgstr "Du oppga ingen av ordene."
+
+#~ msgid "You did not enter the two words shown in the image."
+#~ msgstr "Du oppga ikke de to ordene vist på bildet."
+
+#~ msgid "The words you entered did not match the image"
+#~ msgstr "Ordene du oppga stemte ikke overens med de på bildet"
+
+#~ msgid "Incorrect please try again"
+#~ msgstr "Ikke korrekt, vennligst prøv igjen"
+
+#~ msgid "Enter the words above:"
+#~ msgstr "Oppgi ordene ovenfor:"
+
+#~ msgid "Enter the numbers you hear:"
+#~ msgstr "Oppgi tallene du hører:"
+
+#~ msgid "Get another CAPTCHA"
+#~ msgstr "Få en ny CAPTCHA"
+
+#~ msgid "Get an audio CAPTCHA"
+#~ msgstr "Få en lydbasert CAPTCHA"
+
+#~ msgid "Get an image CAPTCHA"
+#~ msgstr "Få en bilde-CAPTCHA"
+
+#~ msgid "Help"
+#~ msgstr "Hjelp"

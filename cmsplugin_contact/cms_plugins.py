@@ -12,6 +12,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cmsplugin_contact.utils import class_for_path
 
+
 try:
     from cms.plugins.text.settings import USE_TINYMCE
 except ImportError:
@@ -44,7 +45,8 @@ class ContactPlugin(CMSPluginBase):
         } ),
         (_('Spam Protection'), {
             'fields': ('spam_protection_method', 'akismet_api_key',
-                       'recaptcha_public_key', 'recaptcha_private_key', 'recaptcha_theme')
+                       'recaptcha_public_key', 'recaptcha_private_key',
+                       'recaptcha_theme', 'recaptcha_size')
         })
     )
 
@@ -97,6 +99,8 @@ class ContactPlugin(CMSPluginBase):
         elif instance.get_spam_protection_method_display() == 'ReCAPTCHA':
             #if you really want the user to be able to set the key in
             # every form, this should be more flexible
+            from nocaptcha_recaptcha.fields import NoReCaptchaField
+
             class ContactForm(ContactFormBase, RecaptchaContactForm):
                 recaptcha_public_key = (
                     instance.recaptcha_public_key or
@@ -107,6 +111,13 @@ class ContactPlugin(CMSPluginBase):
                     getattr(settings, "RECAPTCHA_PRIVATE_KEY", None)
                 )
                 recaptcha_theme = instance.recaptcha_theme
+                recaptcha_size = instance.recaptcha_size
+                form_name = instance.form_name
+                captcha = NoReCaptchaField(site_key=recaptcha_public_key,
+                                           secret_key=recaptcha_private_key,
+                                           gtag_attrs={'data-theme': recaptcha_theme,
+                                                       'data-size': recaptcha_size}
+                                           )
 
             FormClass = ContactForm
         else:
@@ -161,7 +172,7 @@ class ContactPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         request = context['request']
-        if request.method == "POST" and 'my_name' in request.POST and instance.form_name != request.POST.get('my_name', '-') :
+        if request.method == "POST" and 'my_name' in request.POST and instance.form_name != request.POST.get('my_name','-'):
             request.method = "GET"
         form = self.create_form(instance, request)
         self.render_template = getattr(form, 'template', self.render_template)

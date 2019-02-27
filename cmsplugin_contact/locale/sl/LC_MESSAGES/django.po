@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-12 11:55+0200\n"
+"POT-Creation-Date: 2018-07-01 19:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,158 +17,193 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:16
+#: cmsplugin_contact/admin.py:20
 msgid "Akismet API Key"
 msgstr ""
 
-#: admin.py:16
+#: cmsplugin_contact/admin.py:20
 msgid "Get a Wordpress Key from http://akismet.com/"
 msgstr ""
 
-#: admin.py:18
+#: cmsplugin_contact/admin.py:21
 msgid "ReCAPTCHA Public Key"
 msgstr ""
 
-#: admin.py:18 admin.py:19
+#: cmsplugin_contact/admin.py:21 cmsplugin_contact/admin.py:22
 msgid "Get this from http://www.google.com/recaptcha"
 msgstr ""
 
-#: admin.py:19
+#: cmsplugin_contact/admin.py:22
 msgid "ReCAPTCHA Private Key"
 msgstr ""
 
-#: admin.py:36
+#: cmsplugin_contact/admin.py:40
 msgid ""
 "Akismet library is not installed. Use \"easy_install akismet\" or \"pip "
 "install akismet\"."
 msgstr ""
 
-#: admin.py:50
+#: cmsplugin_contact/admin.py:54
 msgid "The API Key is not valid."
 msgstr ""
 
-#: admin.py:58
+#: cmsplugin_contact/admin.py:62
 msgid ""
 "ReCAPTCHA library is not installed. Use \"easy_install recaptcha-client\" or "
 "\"pip install recaptcha-client\"."
 msgstr ""
 
-#: cms_plugins.py:17
+#: cmsplugin_contact/cms_plugins.py:30
+#: cmsplugin_contact/templates/cmsplugin_contact/subject.txt:1
 msgid "Contact Form"
 msgstr ""
 
-#: cms_plugins.py:25
+#: cmsplugin_contact/cms_plugins.py:43
+msgid "Redirection"
+msgstr ""
+
+#: cmsplugin_contact/cms_plugins.py:46
 msgid "Spam Protection"
 msgstr ""
 
-#: cms_plugins.py:87
-msgid "No subject"
+#: cmsplugin_contact/forms.py:7
+msgid "Email"
 msgstr ""
 
-#: models.py:20
-msgid "Email recipient"
-msgstr ""
-
-#: models.py:21
-msgid "Email sender label"
-msgstr ""
-
-#: models.py:21
-msgid "Your email address"
-msgstr "Naslov tvoje elektronske pošte"
-
-#: models.py:22
-msgid "Subject label"
-msgstr ""
-
-#: models.py:22
+#: cmsplugin_contact/forms.py:8
 msgid "Subject"
 msgstr "Zadeva"
 
-#: models.py:23
-msgid "Message content label"
+#: cmsplugin_contact/forms.py:9
+msgid "Content"
 msgstr ""
 
-#: models.py:23
-msgid "Message"
-msgstr "Sporočilo"
+#: cmsplugin_contact/models.py:17
+msgid "Light"
+msgstr ""
 
-#: models.py:24
+#: cmsplugin_contact/models.py:18
+msgid "Dark"
+msgstr ""
+
+#: cmsplugin_contact/models.py:21
+msgid "Normal"
+msgstr ""
+
+#: cmsplugin_contact/models.py:22
+msgid "Compact"
+msgstr ""
+
+#: cmsplugin_contact/models.py:24
+msgid "Form name"
+msgstr ""
+
+#: cmsplugin_contact/models.py:27
+msgid "Used to distinguish multiple contact forms on the same site."
+msgstr ""
+
+#: cmsplugin_contact/models.py:28
+msgid "Form Layout"
+msgstr ""
+
+#: cmsplugin_contact/models.py:30
+msgid "Choose the layout of contact form"
+msgstr ""
+
+#: cmsplugin_contact/models.py:33
+msgid "Email recipient"
+msgstr ""
+
+#: cmsplugin_contact/models.py:36
 msgid "Thanks message"
 msgstr ""
 
-#: models.py:24
+#: cmsplugin_contact/models.py:37
 msgid "Message displayed on successful submit"
 msgstr ""
 
-#: models.py:24
+#: cmsplugin_contact/models.py:38
 msgid "Thank you for your message."
 msgstr "Hvala za tvoje sporočilo."
 
-#: models.py:25
+#: cmsplugin_contact/models.py:39
 msgid "Submit button value"
 msgstr ""
 
-#: models.py:25
+#: cmsplugin_contact/models.py:40
 msgid "Submit"
 msgstr "Pošlji"
 
-#: models.py:27
+#: cmsplugin_contact/models.py:43
 msgid "Spam protection method"
 msgstr ""
 
-#: models.py:33
+#: cmsplugin_contact/models.py:53
 msgid "ReCAPTCHA theme"
 msgstr ""
 
-#: nospam/fields.py:13
+#: cmsplugin_contact/models.py:57
+msgid "ReCAPTCHA size"
+msgstr ""
+
+#: cmsplugin_contact/models.py:59
+msgid "URL Redirection"
+msgstr ""
+
+#: cmsplugin_contact/models.py:60
+msgid "If it is set, the form redirect to url when the form is valid"
+msgstr ""
+
+#: cmsplugin_contact/nospam/fields.py:13
 msgid "Please don't check this box."
 msgstr "Ne označi tega polja."
 
-#: nospam/forms.py:42
-msgid "Please enter the two words on the image separated by a space:"
-msgstr "Prepiši besedi prikazani na sliki, loči ju s presledkom:"
-
-#: nospam/forms.py:44
-msgid "You did not enter any of the words."
-msgstr "Nisi prepisal/a dveh besed prikazanih na sliki."
-
-#: nospam/forms.py:92
-msgid "You did not enter the two words shown in the image."
-msgstr "Nisi prepisal/a dveh besed prikazanih na sliki."
-
-#: nospam/forms.py:98
-msgid "The words you entered did not match the image."
-msgstr "Prepisani besedi se nista ujemali s sliko."
-
-#: nospam/widgets.py:30
+#: cmsplugin_contact/nospam/widgets.py:12
 msgid "Are you a robot?"
 msgstr "Si robot?"
 
-#: templates/cmsplugin_contact/contact.html:39
-msgid "Incorrect please try again"
-msgstr "Nepravilno. Poskusi znova."
+#: cmsplugin_contact/settings.py:7
+msgid "default"
+msgstr ""
 
-#: templates/cmsplugin_contact/contact.html:42
-msgid "Enter the words above:"
-msgstr "Prepiši besedi odzgoraj:"
+#: cmsplugin_contact/templates/cmsplugin_contact/email.txt:1
+#, fuzzy
+#| msgid "Message"
+msgid "Message from"
+msgstr "Sporočilo"
 
-#: templates/cmsplugin_contact/contact.html:43
-msgid "Enter the numbers you hear:"
-msgstr "Vnesi števila, ki jih slišiš:"
+#~ msgid "Your email address"
+#~ msgstr "Naslov tvoje elektronske pošte"
 
-#: templates/cmsplugin_contact/contact.html:48
-msgid "Get another CAPTCHA"
-msgstr "Ponudi drugo CAPTCHA"
+#~ msgid "Please enter the two words on the image separated by a space:"
+#~ msgstr "Prepiši besedi prikazani na sliki, loči ju s presledkom:"
 
-#: templates/cmsplugin_contact/contact.html:49
-msgid "Get an audio CAPTCHA"
-msgstr "Ponudi zvočno CAPTCHA"
+#~ msgid "You did not enter any of the words."
+#~ msgstr "Nisi prepisal/a dveh besed prikazanih na sliki."
 
-#: templates/cmsplugin_contact/contact.html:50
-msgid "Get an image CAPTCHA"
-msgstr "Ponudi slikovno CAPTCHA"
+#~ msgid "You did not enter the two words shown in the image."
+#~ msgstr "Nisi prepisal/a dveh besed prikazanih na sliki."
 
-#: templates/cmsplugin_contact/contact.html:52
-msgid "Help"
-msgstr "Pomoč"
+#~ msgid "The words you entered did not match the image."
+#~ msgstr "Prepisani besedi se nista ujemali s sliko."
+
+#~ msgid "Incorrect please try again"
+#~ msgstr "Nepravilno. Poskusi znova."
+
+#~ msgid "Enter the words above:"
+#~ msgstr "Prepiši besedi odzgoraj:"
+
+#~ msgid "Enter the numbers you hear:"
+#~ msgstr "Vnesi števila, ki jih slišiš:"
+
+#~ msgid "Get another CAPTCHA"
+#~ msgstr "Ponudi drugo CAPTCHA"
+
+#~ msgid "Get an audio CAPTCHA"
+#~ msgstr "Ponudi zvočno CAPTCHA"
+
+#~ msgid "Get an image CAPTCHA"
+#~ msgstr "Ponudi slikovno CAPTCHA"
+
+#~ msgid "Help"
+#~ msgstr "Pomoč"

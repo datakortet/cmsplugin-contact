@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-08 09:44+0200\n"
+"POT-Creation-Date: 2018-07-01 19:55+0300\n"
 "PO-Revision-Date: 2014-08-08 10:05+0100\n"
 "Last-Translator: Rémi Saurel <r.saurel@webu.coop>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,168 +18,204 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: admin.py:16
+#: cmsplugin_contact/admin.py:20
 msgid "Akismet API Key"
 msgstr "Clé de l'API d'Akismet"
 
-#: admin.py:16
+#: cmsplugin_contact/admin.py:20
 msgid "Get a Wordpress Key from http://akismet.com/"
 msgstr "Clé Wordpress de http://akismet.com/"
 
-#: admin.py:18
+#: cmsplugin_contact/admin.py:21
 msgid "ReCAPTCHA Public Key"
 msgstr "Clé publique ReCAPTCHA"
 
-#: admin.py:18
-#: admin.py:19
+#: cmsplugin_contact/admin.py:21 cmsplugin_contact/admin.py:22
 msgid "Get this from http://www.google.com/recaptcha"
 msgstr "Récupérable sur http://www.google.com/recaptcha"
 
-#: admin.py:19
+#: cmsplugin_contact/admin.py:22
 msgid "ReCAPTCHA Private Key"
 msgstr "Clé privée ReCAPTCHA"
 
-#: admin.py:36
-msgid "Akismet library is not installed. Use \"easy_install akismet\" or \"pip install akismet\"."
-msgstr "La bibliothèque Akismet n'est pas installée. Pour l'installer: \"easy_install akismet\" ou \"pip install akismet\""
+#: cmsplugin_contact/admin.py:40
+msgid ""
+"Akismet library is not installed. Use \"easy_install akismet\" or \"pip "
+"install akismet\"."
+msgstr ""
+"La bibliothèque Akismet n'est pas installée. Pour l'installer: "
+"\"easy_install akismet\" ou \"pip install akismet\""
 
-#: admin.py:50
+#: cmsplugin_contact/admin.py:54
 msgid "The API Key is not valid."
 msgstr "La clé de l'API n'est pas valide."
 
-#: admin.py:58
-msgid "ReCAPTCHA library is not installed. Use \"easy_install recaptcha-client\" or \"pip install recaptcha-client\"."
-msgstr "La bibliothèque ReCAPTCHA n'est pas installée. Pour l'installer: \"easy_install recaptcha-client\" ou \"pip install recaptcha-client\""
+#: cmsplugin_contact/admin.py:62
+msgid ""
+"ReCAPTCHA library is not installed. Use \"easy_install recaptcha-client\" or "
+"\"pip install recaptcha-client\"."
+msgstr ""
+"La bibliothèque ReCAPTCHA n'est pas installée. Pour l'installer: "
+"\"easy_install recaptcha-client\" ou \"pip install recaptcha-client\""
 
-#: cms_plugins.py:28
-#: templates/cmsplugin_contact/subject.txt:1
+#: cmsplugin_contact/cms_plugins.py:30
+#: cmsplugin_contact/templates/cmsplugin_contact/subject.txt:1
 msgid "Contact Form"
 msgstr "Formulaire de contact"
 
-#: cms_plugins.py:41
+#: cmsplugin_contact/cms_plugins.py:43
+msgid "Redirection"
+msgstr ""
+
+#: cmsplugin_contact/cms_plugins.py:46
 msgid "Spam Protection"
 msgstr "Protection contre le spam"
 
-#: forms.py:7
+#: cmsplugin_contact/forms.py:7
 msgid "Email"
 msgstr "Email"
 
-#: forms.py:8
+#: cmsplugin_contact/forms.py:8
 msgid "Subject"
 msgstr "Objet"
 
-#: forms.py:9
+#: cmsplugin_contact/forms.py:9
 msgid "Content"
 msgstr "Contenu"
 
-#: models.py:24
+#: cmsplugin_contact/models.py:17
+msgid "Light"
+msgstr ""
+
+#: cmsplugin_contact/models.py:18
+msgid "Dark"
+msgstr ""
+
+#: cmsplugin_contact/models.py:21
+msgid "Normal"
+msgstr ""
+
+#: cmsplugin_contact/models.py:22
+msgid "Compact"
+msgstr ""
+
+#: cmsplugin_contact/models.py:24
 msgid "Form name"
 msgstr "Nom du formulaire"
 
-#: models.py:27
+#: cmsplugin_contact/models.py:27
 msgid "Used to distinguish multiple contact forms on the same site."
-msgstr "Utilisé pour distinguer plusieurs formulaires de contact sur un même site."
+msgstr ""
+"Utilisé pour distinguer plusieurs formulaires de contact sur un même site."
 
-#: models.py:28
+#: cmsplugin_contact/models.py:28
 msgid "Form Layout"
 msgstr "Mise en page du formulaire"
 
-#: models.py:30
-msgid "Choice the layout of contact form"
+#: cmsplugin_contact/models.py:30
+#, fuzzy
+#| msgid "Choice the layout of contact form"
+msgid "Choose the layout of contact form"
 msgstr "Choisissez la mise en page du formulaire de contact"
 
-#: models.py:33
+#: cmsplugin_contact/models.py:33
 msgid "Email recipient"
 msgstr "Destinataire de l'email"
 
-#: models.py:36
+#: cmsplugin_contact/models.py:36
 msgid "Thanks message"
 msgstr "Message de remerciement"
 
-#: models.py:37
+#: cmsplugin_contact/models.py:37
 msgid "Message displayed on successful submit"
 msgstr "Message affiché après la réception du formulaire"
 
-#: models.py:38
+#: cmsplugin_contact/models.py:38
 msgid "Thank you for your message."
 msgstr "Merci pour votre message."
 
-#: models.py:39
+#: cmsplugin_contact/models.py:39
 msgid "Submit button value"
 msgstr "Libellé du bouton d'envoi"
 
-#: models.py:40
+#: cmsplugin_contact/models.py:40
 msgid "Submit"
 msgstr "Envoyer"
 
-#: models.py:43
+#: cmsplugin_contact/models.py:43
 msgid "Spam protection method"
 msgstr "Méthode de protection contre le spam"
 
-#: models.py:53
+#: cmsplugin_contact/models.py:53
 msgid "ReCAPTCHA theme"
 msgstr "Thème de ReCAPTCHA"
 
-#: settings.py:7
-msgid "default"
-msgstr "par défaut"
+#: cmsplugin_contact/models.py:57
+#, fuzzy
+#| msgid "ReCAPTCHA theme"
+msgid "ReCAPTCHA size"
+msgstr "Thème de ReCAPTCHA"
 
-#: nospam/fields.py:13
+#: cmsplugin_contact/models.py:59
+msgid "URL Redirection"
+msgstr ""
+
+#: cmsplugin_contact/models.py:60
+msgid "If it is set, the form redirect to url when the form is valid"
+msgstr ""
+
+#: cmsplugin_contact/nospam/fields.py:13
 msgid "Please don't check this box."
 msgstr "Veuillez ne pas cocher cette case."
 
-#: nospam/forms.py:42
-msgid "Please enter the two words on the image separated by a space:"
-msgstr "Veuillez saisir les deux mots présents sur l'image, séparés par un espace :"
-
-#: nospam/forms.py:44
-msgid "You did not enter any of the words."
-msgstr "Vous n'avez saisi aucun des mots."
-
-#: nospam/forms.py:82
-msgid "An unexpected Error occurred, please try again."
-msgstr "Une erreur inattendue s'est produite, veuillez réessayer."
-
-#: nospam/forms.py:84
-msgid "Please enter the two words shown in the image."
-msgstr "Veuillez saisir les deux mots apparaissant dans l'image."
-
-#: nospam/forms.py:92
-msgid "The words you entered did not match the image. Please try again."
-msgstr "Les mots que vous avez saisis ne correspondent pas à ceux de l'image. Veuillez réessayer."
-
-#: nospam/widgets.py:30
+#: cmsplugin_contact/nospam/widgets.py:12
 msgid "Are you a robot?"
 msgstr "Êtes-vous un robot?"
 
-#: templates/cmsplugin_contact/contact.html:25
-msgid "Incorrect please try again"
-msgstr "La saisie est incorrecte, veuillez réessayer"
+#: cmsplugin_contact/settings.py:7
+msgid "default"
+msgstr "par défaut"
 
-#: templates/cmsplugin_contact/contact.html:28
-msgid "Enter the words above:"
-msgstr "Veuillez saisir les mots affichés ci-dessus :"
-
-#: templates/cmsplugin_contact/contact.html:29
-msgid "Enter the numbers you hear:"
-msgstr "Veuillez saisir les chiffres que vous entendez :"
-
-#: templates/cmsplugin_contact/contact.html:34
-msgid "Get another CAPTCHA"
-msgstr "Obtenir un nouveau CAPTCHA"
-
-#: templates/cmsplugin_contact/contact.html:35
-msgid "Get an audio CAPTCHA"
-msgstr "Obtenir un CAPTCHA audio"
-
-#: templates/cmsplugin_contact/contact.html:36
-msgid "Get an image CAPTCHA"
-msgstr "Obtenir un CAPTCHA visuel"
-
-#: templates/cmsplugin_contact/contact.html:38
-msgid "Help"
-msgstr "Aide"
-
-#: templates/cmsplugin_contact/email.txt:1
+#: cmsplugin_contact/templates/cmsplugin_contact/email.txt:1
 msgid "Message from"
 msgstr "Message envoyé par"
+
+#~ msgid "Please enter the two words on the image separated by a space:"
+#~ msgstr ""
+#~ "Veuillez saisir les deux mots présents sur l'image, séparés par un "
+#~ "espace :"
+
+#~ msgid "You did not enter any of the words."
+#~ msgstr "Vous n'avez saisi aucun des mots."
+
+#~ msgid "An unexpected Error occurred, please try again."
+#~ msgstr "Une erreur inattendue s'est produite, veuillez réessayer."
+
+#~ msgid "Please enter the two words shown in the image."
+#~ msgstr "Veuillez saisir les deux mots apparaissant dans l'image."
+
+#~ msgid "The words you entered did not match the image. Please try again."
+#~ msgstr ""
+#~ "Les mots que vous avez saisis ne correspondent pas à ceux de l'image. "
+#~ "Veuillez réessayer."
+
+#~ msgid "Incorrect please try again"
+#~ msgstr "La saisie est incorrecte, veuillez réessayer"
+
+#~ msgid "Enter the words above:"
+#~ msgstr "Veuillez saisir les mots affichés ci-dessus :"
+
+#~ msgid "Enter the numbers you hear:"
+#~ msgstr "Veuillez saisir les chiffres que vous entendez :"
+
+#~ msgid "Get another CAPTCHA"
+#~ msgstr "Obtenir un nouveau CAPTCHA"
+
+#~ msgid "Get an audio CAPTCHA"
+#~ msgstr "Obtenir un CAPTCHA audio"
+
+#~ msgid "Get an image CAPTCHA"
+#~ msgstr "Obtenir un CAPTCHA visuel"
+
+#~ msgid "Help"
+#~ msgstr "Aide"

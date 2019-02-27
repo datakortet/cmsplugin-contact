@@ -25,3 +25,4 @@ class RecaptchaContactForm(RecaptchaForm):
     recaptcha_public_key = None
     recaptcha_private_key = None
     recaptcha_theme = None
+    recaptcha_size = None
