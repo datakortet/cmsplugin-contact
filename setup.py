@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name='cmsplugin-contact',
-    version='1.1.3',
+    version='1.1.4',
     description='Extendable contact form plugin for Django CMS with spam protection and i18n',
     long_description=open('README.rst').read(),
-    author='Maccesch',
-    author_email='maccesch@gmail.com',
-    url='http://github.com/maccesch/cmsplugin-contact',
+    author='Datakortet',
+    author_email='ed@datakortet.no',
+    url='http://github.com/datakortet/cmsplugin-contact',
     packages=find_packages(),
     keywords='contact form django cms django-cms spam protection email',
     classifiers=[
