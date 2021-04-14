@@ -1,0 +1,11 @@
+_schema: https://static.datakortet.no/schema/dkbuild.schema.yaml
+
+package:
+  name: cmsplugin-contact
+  description: Extendable contact form plugin for Django CMS with spam protection
+    and i18n
+  version: 1.1.4
+  created:
+
+build:
+  venv: cmsplugin-contact
