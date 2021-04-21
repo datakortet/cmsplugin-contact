@@ -12,11 +12,8 @@ def pytest_configure():
         TESTING=True,
         PRODUCTION=False,
         DKCSRF_COOKIE_NAME="csrftoken",
-        ROOT_URLCONF='urls',
+        ROOT_URLCONF='cmsplugin_contact.urls',
         APPNAME='cmsplugin_contact',
-        NETAXEPT_REST_REGISTER='https://test.epayment.nets.eu/Netaxept/Register.aspx',
-        NETAXEPT_REST_QUERY='https://test.epayment.nets.eu/Netaxept/Query.aspx',
-        NETAXEPT_REST_PROCESS='https://test.epayment.nets.eu/Netaxept/Process.aspx',
         CACHES={
             'default': {
                 'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
@@ -46,6 +43,7 @@ def pytest_configure():
             'django.contrib.messages',
             'django.contrib.staticfiles',
             'django.contrib.sites',
+            'cms',
             'cmsplugin_contact'
         ),
         AUTH_USER_MODEL='auth.User',
