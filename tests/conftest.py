@@ -14,6 +14,9 @@ def pytest_configure():
         DKCSRF_COOKIE_NAME="csrftoken",
         ROOT_URLCONF='cmsplugin_contact.urls',
         APPNAME='cmsplugin_contact',
+        SITE_ID=1,
+        LANGUAGE_CODE='en',
+        LANGUAGES={'en': 'en'},
         CACHES={
             'default': {
                 'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
@@ -44,9 +47,20 @@ def pytest_configure():
             'django.contrib.staticfiles',
             'django.contrib.sites',
             'cms',
-            'cmsplugin_contact'
+            'cmsplugin_contact',
+            'treebeard'
         ),
         AUTH_USER_MODEL='auth.User',
-
+        TEMPLATES=[{
+            "BACKEND": "django.template.backends.django.DjangoTemplates",
+            "DIRS": [os.path.join(DIRNAME, 'templates')],
+            "APP_DIRS": True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.request',
+                ],
+            }
+        }],
+    
     )
     django.setup()
