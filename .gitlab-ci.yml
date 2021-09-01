@@ -5,6 +5,7 @@ include:
 
 py35dj18:
   extends: .testpackage
+  image: thebjorn/dktestpackage3:latest
   script:
     - dk testpackage --ci --tag=py35-dj18 --django=1.8.19
 
