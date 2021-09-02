@@ -1,6 +1,6 @@
 django==1.8.19
 django-cms==3.4.7
-django-treebeard==3.0
+django-treebeard==4.0.1
 django-classy-tags==2.0.0
 django-sekizai==0.10.0
 django-formtools==2.1
