@@ -1,7 +1,8 @@
-django==1.8.19
+django==1.8.19                 ; python_version < '3.6'
+django==1.9.13                 ; python_version >= '3.6'
 django-cms==3.4.7
 django-treebeard==4.0.1
-django-classy-tags==2.0.0
+django-classy-tags==0.8.0
 django-sekizai==0.10.0
 django-formtools==2.1
 
