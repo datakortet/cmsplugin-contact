@@ -47,6 +47,7 @@ def pytest_configure():
             'django.contrib.staticfiles',
             'django.contrib.sites',
             'cms',
+            'menus',
             'cmsplugin_contact',
             'treebeard'
         ),
